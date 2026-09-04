@@ -1,0 +1,62 @@
+default_agent: customer_support_agent
+agents:
+  customer_support_agent:
+    name: customer_support_agent
+    language: python
+    node_version: '20'
+    entrypoint: /Users/israel/Downloads/customer-support-agent/main.py
+    deployment_type: direct_code_deploy
+    runtime_type: PYTHON_3_12
+    platform: linux/arm64
+    container_runtime: null
+    source_path: /Users/israel/Downloads/customer-support-agent
+    aws:
+      execution_role: arn:aws:iam::108135139166:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+      execution_role_auto_create: false
+      account: '108135139166'
+      region: us-east-1
+      ecr_repository: null
+      ecr_auto_create: false
+      s3_path: s3://bedrock-agentcore-codebuild-sources-108135139166-us-east-1
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: customer_support_agent-ocaLNkCdxZ
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:108135139166:runtime/customer_support_agent-ocaLNkCdxZ
+      agent_session_id: 4a168975-0a96-453d-8a18-df44ca05268d
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    memory:
+      mode: STM_ONLY
+      memory_id: customer_support_agent_mem-THYjgC72Jb
+      memory_arn: arn:aws:bedrock-agentcore:us-east-1:108135139166:memory/customer_support_agent_mem-THYjgC72Jb
+      memory_name: customer_support_agent_mem
+      event_expiry_days: 30
+      first_invoke_memory_check_done: true
+      was_created_by_toolkit: true
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false

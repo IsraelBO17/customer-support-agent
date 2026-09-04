@@ -1,0 +1,16 @@
+[project]
+name = "customer-support-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bedrock-agentcore>=1.22.0",
+    "strands-agents>=1.54.0",
+    "strands-agents-tools[agent-core-browser]>=0.8.7",
+]
+
+[dependency-groups]
+dev = [
+    "bedrock-agentcore-starter-toolkit>=0.3.12",
+]
